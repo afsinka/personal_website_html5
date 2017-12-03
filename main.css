@@ -25,5 +25,9 @@
 .nav-item-social a{
   font-size: 28px;
   color: white !important;
-  padding: 5px 10px;
+  padding: 5px 10px !important;
+}
+
+.nav-item-social a:hover{
+  color: grey !important;
 }
