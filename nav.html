@@ -1,0 +1,81 @@
+<nav id="navy" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a onClick="logoClick(event)" class="navbar-brand" href="#">afsinka</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto" id="ul_list">
+      <li class="nav-item active">
+        <a id="homebutton" onClick="homeClick(event)" class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a id="aboutbutton" onClick="aboutClick(event)" class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a id="contactbutton" onClick="contactClick(event)" class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+    <div class="nav-social">
+      <ul class="navbar-nav">
+        <li class="nav-item nav-item-social">
+          <a href="https://github.com/afsinka" target="_blank" title="github/afsinka" class="fa fa-github nav-link"></a>
+        </li>
+        <!-- <li class="nav-item nav-item-social">
+      <a href="https://stackoverflow.com/users/1091666/afsinka" target="_blank" title="stackoverflow/afsinka" class="fa fa-stack-overflow nav-link"></a>
+    </li> -->
+        <li class="nav-item nav-item-social">
+          <a href="https://tr.linkedin.com/in/afsin-kapusuzoglu-7142b382" target="_blank" title="linkedin/afsinka" class="fa fa-linkedin nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="https://www.instagram.com/afsinka/" target="_blank" title="instagram/afsinka" class="fa fa-instagram nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="http://www.last.fm/user/itustik" target="_blank" title="lastFM/afsinka" class="fa fa-lastfm nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="https://www.youtube.com/user/afsinka" target="_blank" title="youtube/afsinka" class="fa fa-youtube-play nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="https://afsinka.wordpress.com/" target="_blank" title="wordpress/afsinka" class="fa fa-wordpress nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="https://medium.com/@afsinka" target="_blank" title="medium/afsinka" class="fa fa-medium nav-link"></a>
+        </li>
+        <li class="nav-item nav-item-social">
+          <a href="https://twitter.com/afsinka" target="_blank" title="@afsinka" class="fa fa-twitter nav-link"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
+<script>
+  function homeClick(e) {
+    e.preventDefault();
+    $('#content-placeholder').empty();
+    $('#content-placeholder').load('home.html');
+    $('#ul_list .active').removeClass('active');
+    $('#homebutton').parent().addClass('active');
+  }
+
+  function logoClick(e) {
+    homeClick(e);
+  }
+
+  function aboutClick(e) {
+    e.preventDefault();
+    $('#content-placeholder').empty();
+    $('#content-placeholder').load('about.html');
+    $('#ul_list .active').removeClass('active');
+    $('#aboutbutton').parent().addClass('active');
+  }
+
+  function contactClick(e) {
+    e.preventDefault();
+    $('#content-placeholder').empty();
+    $('#content-placeholder').load('contact.html');
+    $('#ul_list .active').removeClass('active');
+    $('#contactbutton').parent().addClass('active');
+  }
+</script>
